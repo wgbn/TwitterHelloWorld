@@ -8,10 +8,28 @@
     <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <!-- twitterButton para login -->
     <com.twitter.sdk.android.core.identity.TwitterLoginButton
         android:id="@+id/twitter_login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
+
+    <!-- TweetView para exibir um tweet -->
+    <com.twitter.sdk.android.tweetui.TweetView
+        xmlns:twittersdk="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/photo_default_tweet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        twittersdk:tw__tweet_id="644174614604742656"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Novo Twitty"
+        android:id="@+id/twtNovo"
+        android:layout_below="@+id/photo_default_tweet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp" />
 
 </RelativeLayout>
